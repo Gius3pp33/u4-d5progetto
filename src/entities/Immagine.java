@@ -1,14 +1,16 @@
 package entities;
 
-// classe per le immagini
 public class Immagine extends ElementoMultimediale {
-    // Sezione Costruttori
-    public Immagine(String titolo) {
-        super(titolo);
+    private int luminosita;
+
+    // Costruttore
+    public Immagine(String titolo, int luminosita) {
+        super(titolo); // inizializzo il titolo dell'immagine
+        this.luminosita = luminosita > 0 ? luminosita : 1; // Imposto la luminosità di default
     }
 
-    // Sezione Metodi
-    public void mostra() {
-        System.out.println("Immagine: " + getTitolo()); // mostro il titolo dell'immagine
+    // Metodo per mostrare l'immagine
+    public void show() {
+        System.out.println(getTitolo() + " " + "*".repeat(luminosita));
     }
 }

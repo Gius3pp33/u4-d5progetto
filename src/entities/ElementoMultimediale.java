@@ -1,17 +1,19 @@
 package entities;
 
-// classe astratta per l'elemento  multimediale
+// classe padre
 public abstract class ElementoMultimediale {
-    // Variabile di istanza
+    // Variabile di istanza privata
     private String titolo;
 
     // Sezione Costruttori
     public ElementoMultimediale(String titolo) {
-        this.titolo = titolo; //inizializzo il titolo
+        this.titolo = titolo;
     }
 
-    // Sezione Metodi
+    // Getter per il titolo
     public String getTitolo() {
-        return titolo; //restituisco il titolo
+        return titolo;
     }
+
+
 }
